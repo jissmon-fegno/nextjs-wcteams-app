@@ -1,19 +1,26 @@
 import Link from 'next/link'
 import React from 'react'
+import style from './Argentina.module.scss';
 
 export default function Argentina() {
   return (
     <div>
-        <h2>
+        <h2  className={style.title}>
             Argentina Squad
         </h2>
         <ul>
             <li>
                Messi
                <button
+                className={style.btn}
                 style={{marginLeft: '1rem'}}
                >
-                    View Profile
+                    <Link 
+                        href={'/profiles/argentina/messi'}
+                        style={{color: '#000'}}
+                    >
+                        View Profile
+                    </Link>
                 </button>
             </li>
             <li>
@@ -21,7 +28,11 @@ export default function Argentina() {
                <button
                 style={{marginLeft: '1rem'}}
                >
-                    View Profile
+                    <Link
+                        href={'/profiles/argentina/dimaria'}
+                    >
+                        View Profile
+                    </Link>
                 </button>
             </li>
         </ul>
